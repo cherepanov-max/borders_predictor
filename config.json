@@ -1,6 +1,7 @@
 {
   "inputDir":"data/input",
-  "inputName":"processed_mask2.jpg",
+  "inputName":"mask3.jpg",
+  "output_dir":"data/output",
   "env":"dev",
   "author":"cherepanov@ku66.ru"
 }

@@ -1,13 +1,15 @@
 import json
-from modules.MaskProcessor import MaskProcessor
-from modules.MaskAnalyzer import MaskAnalyzer
+import sys
+from modules.AppManager import AppManager
 
 with open('config.json', 'r') as configFile:
     config=configFile.read()
 
 config = json.loads(config)
 
-maskPath = config['inputDir'] + '/' + config['inputName']
+filename = sys.argv[1]
+imagePath = config['input_dir'] + '/' + filename
+maskPath = config['output_dir'] + '/' + config['filename']
 
-maskProcessor = MaskProcessor(maskPath)
-# MaskAnalyzer(maskProcessor)
+appManager = AppManager(imagePath, maskPath)
+print(appManager.process_image())

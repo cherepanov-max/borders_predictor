@@ -17,7 +17,7 @@ class BordersPredictor:
         :param image numpy array - изображение
         """
 
-        self.model = load_model('neural_network_model.h5')
+        self.model = load_model('moduels/neural_network_model.h5')
         self.image = self.process_input_image(image)
 
 
